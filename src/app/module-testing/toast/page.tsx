@@ -1,0 +1,15 @@
+"use client"
+
+import { useToast } from "@/components/context/ToastContext"
+
+export default function DialogTestPage() {
+    const {toast} = useToast();
+    return (
+        <div className="grid grid-cols-4 m-8 gap-4">
+            <button className="btn btn-info" onClick={() => {toast.info("Information")}}>Information</button>
+            <button className="btn btn-error" onClick={() => {toast.error("Error")}}>Error</button>
+            <button className="btn btn-success" onClick={() => {toast.success("Success")}}>Success</button>
+            <button className="btn btn-warning" onClick={() => {toast.warning("Warning")}}>Warning</button>
+        </div>
+    )
+}
