@@ -6,11 +6,24 @@ export default function DialogTestPage() {
   const { toast } = useToast()
 
   const sendNotification = async () => {
-    const permission = await Notification.requestPermission()
-    if (permission !== "granted") return
+    if (!("Notification" in window)) {
+      toast.error("Notifications not supported")
+      return
+    }
+
+    let permission = Notification.permission
+
+    if (permission === "default") {
+      permission = await Notification.requestPermission()
+    }
+
+    if (permission !== "granted") {
+      toast.error("Permission denied")
+      return
+    }
 
     new Notification("Hello", { body: "Membara Portoku" })
-    toast.success("Notif Sent Successfully!!")
+    toast.success("Notification shown")
   }
 
   return (
