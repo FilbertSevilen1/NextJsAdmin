@@ -9,10 +9,10 @@ export default function DialogTestPage() {
     const [isOpenErrorDialog, SetIsOpenErrorDialog] = useState(false);
     const [isOpenConfirmationDialog, SetIsOpenConfirmationDialog] = useState(false);
     return (
-        <div className="grid grid-cols-4 m-8 gap-4">
-            <button className="btn btn-info" onClick={() => SetIsOpenInformationDialog(true)}>Information</button>
-            <button className="btn btn-error" onClick={() => SetIsOpenErrorDialog(true)}>Error</button>
-            <button className="btn btn-success" onClick={() => SetIsOpenConfirmationDialog(true)}>Confirmation</button>
+        <div className="grid m-8 gap-4">
+            <button className="w-full btn btn-info" onClick={() => SetIsOpenInformationDialog(true)}>Information</button>
+            <button className="w-full btn btn-error" onClick={() => SetIsOpenErrorDialog(true)}>Error</button>
+            <button className="w-full btn btn-success" onClick={() => SetIsOpenConfirmationDialog(true)}>Confirmation</button>
 
             {
                 isOpenInformationDialog &&

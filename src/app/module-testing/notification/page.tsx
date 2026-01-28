@@ -15,12 +15,13 @@ export default function DialogTestPage() {
             new Notification('Hello', {
                 body: 'Membara Portoku'
             })
+            toast.success("Notif Sent Successfully!")
         }, 10000)
     }
 
     return (
-        <div className="grid grid-cols-4 m-8 gap-4">
-            <button className="btn btn-info" onClick={() => sendNotification()}>Push Notification</button>
+        <div className="grid m-8 gap-4">
+            <button className="btn btn-info w-full" onClick={() => sendNotification()}>Push Notification</button>
         </div >
     )
 }
