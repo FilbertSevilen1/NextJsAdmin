@@ -16,10 +16,12 @@ import {
   mdiFolderOutline,
   mdiProgressClock,
   mdiElectronFramework,
+  mdiThoughtBubble,
 } from "@mdi/js";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "../context/AuthContext";
+import { label } from "framer-motion/client";
 
 const menuItems = [
   { icon: mdiHome, label: "Dashboard", link: "/dashboard" },
@@ -31,6 +33,7 @@ const menuItems = [
       { icon: mdiFolderOutline, label: "Expansion Panel", link: "/module-testing/expansion-panel" },
       { icon: mdiProgressClock, label: "Progress Bar", link: "/module-testing/progress-bar" },
       { icon: mdiToaster, label: "Toast", link: "/module-testing/toast" },
+      { icon: mdiThoughtBubble, label:"Notification", link:"/module-testing/notification"}
     ],
   },
   {
