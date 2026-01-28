@@ -13,7 +13,7 @@ export default function DialogTestPage() {
         new Notification('Hello', {
             body: 'Membara Portoku'
         })
-        toast.success("Notif Sent Successfully!")
+        toast.success("Notif Sent Successfully!!")
     }
 
     return (
