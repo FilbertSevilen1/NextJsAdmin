@@ -6,17 +6,14 @@ export default function DialogTestPage() {
     const { toast } = useToast();
 
     const sendNotification = async () => {
-        toast.info("Notification will be sent after 10 seconds")
         if (Notification.permission !== 'granted') {
             await Notification.requestPermission()
         }
 
-        setTimeout(() => {
-            new Notification('Hello', {
-                body: 'Membara Portoku'
-            })
-            toast.success("Notif Sent Successfully!")
-        }, 10000)
+        new Notification('Hello', {
+            body: 'Membara Portoku'
+        })
+        toast.success("Notif Sent Successfully!")
     }
 
     return (
